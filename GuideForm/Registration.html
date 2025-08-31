@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .error{border: 2px solid red;}
+    </style>
+</head>
+<body>
+    <h1 id="form">Registration Form</h1>
+
+<form id="formCheck">
+    <div id="check">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required><br><br>
+    </div>
+
+    <div>
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" required ><br><br>
+
+        <label for="password">Password:</label>
+        <input type="text" name="password" id="pwd" required>
+
+        <span id="toggle">Show/Hide</span><br><br>
+    </div>
+
+    <div>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword"><br>
+    </div>
+    
+    <div>
+        <p>Gender:</p>
+        <input type="radio" id="male" name="gender" value="male">
+        <label type="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label type="female">Female</label>
+    </div>
+    
+    <div>
+        <p>Select your interest:</p>
+        <input type="checkbox" id="sports" name="interest" value="Sports">
+        <label type="sports">Sports</label>
+        <input type="checkbox" id="dancing" name="interest" value="Dancing">
+        <label type="dancing">Dancing</label>
+        <input type="checkbox" id="technology" name="interest" value="Technology">
+        <label type="technology">Technology</label><br><br>
+    </div>
+   
+    <div>
+        <textarea id="bio" maxlength="100"></textarea>
+        <p id="count">0/100</p>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+    <script>
+         $("#form").css({
+            "text-align" : "center",
+            "background-color" : "black",
+            "color" : "white",
+            "padding" : "10px"
+        });
+        $("#toggle").click(function(){
+            let pwd = $("#pwd");
+
+            pwd.attr("type", pwd.attr("type") === "password" ? "text" : "password");
+        });
+        $("#bio").on("input", function(){
+            $("#count").text($(this).val().length + "/100");
+        });
+         $("#check").submit(function(e){
+            e.preventDefault();
+            if($("#email").val() === "" || $("#password").val() === "")
+                alert("Please fill in fields");
+        });
+         $("#formCheck").submit(function(e){
+            e.preventDefault();
+            alert("Form submitted successfully!");
+        });
+    </script>
+</body>
+</html>
