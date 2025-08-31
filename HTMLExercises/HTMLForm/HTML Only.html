@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Login Form (HTML Only)</title>
+</head>
+<body>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="text" name="password" id="password" required><br><br>
+
+        <button tpe="submit">Log in</button>
+    </form>
+
+    <form>
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" placeholder="Enter your Email:">
+    </form>
+    
+    <p>Choose your role:</p>
+    <input type="radio" id="student" name="role" value="student">
+    <label type="student">Student</label>
+    <input type="radio" id="teacher" name="role" value="teacher">
+    <label type="teacher">Teacher</label>
+
+    <p>Select your interest:</p>
+    <input type="checkbox" id="html" name="interest" value="HTML">
+    <label type="html">HTML</label>
+    <input type="radio" id="css" name="interest" value="CSS">
+    <label type="css">CSS</label>
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+        <option value="ph">Philippines</option>
+        <option value="us">United States</option>
+        <option value="jp">Japan</option>
+    </select>
+
+    <label for="message">Your Message:</label>
+    <textarea id="message" name="message" rows="4" cols="40"></textarea>
+
+    <input type="text" name="username" required mainlength="3" maxlength="10">
+
+    <input type="email" name="eamil" required>
+</body>
+</html>
