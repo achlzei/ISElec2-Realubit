@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Get Input Value </title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+
+   <label for="name"> Enter your name: </label>
+    <input type="text" id="name"/>
+    <button id="btn"> Click here to submit </button>
+
+    <script>
+      $("#btn").click(function() {
+      let val = $("#name").val();
+      console.log(val);
+    });
+    </script>
+
+  </body>
+</html>

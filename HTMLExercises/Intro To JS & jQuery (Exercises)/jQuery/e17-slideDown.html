@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Slide Down Panel </title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      #panel {
+        background-color: rgb(219, 112, 133);
+        padding: 10px;
+        display: none;
+      }
+  </style>
+  </head>
+  <body>
+
+    <div id="panel">
+    <p> Wahhhhh, now you can see meee~ </p>
+    </div>
+    <button id="btnSlideDown"> Slide Down </button>
+
+    <script>
+      $("#btnSlideDown").click(function() {
+        $("#panel").slideDown();
+    });
+    </script>
+
+  </body>
+</html>

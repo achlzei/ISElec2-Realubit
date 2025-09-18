@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Mouseover Event </title>
+    <style>
+      #demo {
+        color: rgb(19, 2, 2);
+      }
+    </style>
+  </head>
+  <body>
+
+    <p id="demo"> Mouseover? I guess this is OVER! </p>
+
+    <script>
+      document.getElementById("demo").onmouseover = function() {
+        this.style.color = "red";
+    };
+    </script>
+
+  </body>
+</html>

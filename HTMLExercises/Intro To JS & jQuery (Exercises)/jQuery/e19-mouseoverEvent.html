@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Mouseover Event </title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      #demo {
+        color: rgb(19, 2, 2);
+      }
+    </style>
+  </head>
+    <body>
+
+    <p id="demo"> Mouseover? I guess this is OVER! </p>
+
+    <script>
+      $("#demo").mouseover(function(){
+        $(this).css("color", "red");
+        });
+    </script>
+
+    </body>
+</html>
